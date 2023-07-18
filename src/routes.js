@@ -1,5 +1,6 @@
 import {createWebHashHistory, createRouter} from 'vue-router'
 import Home from "@/pages/Home";
+import Index from "@/pages/Index";
 import Tutorials from "@/pages/Tutorials";
 import Practice from "@/pages/Practice";
 import Challenges from "@/pages/Challenges";
@@ -8,8 +9,13 @@ import NotFound from "@/pages/NotFound";
 
 const routes = [
     {
-        name: 'Home',
+        name: 'Index',
         path: '/',
+        component: Index
+    },
+    {
+        name: 'Home',
+        path: '/home',
         component: Home
     },
     {
