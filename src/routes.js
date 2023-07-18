@@ -4,6 +4,7 @@ import Tutorials from "@/pages/Tutorials";
 import Practice from "@/pages/Practice";
 import Challenges from "@/pages/Challenges";
 import Contact from "@/pages/Contact";
+import NotFound from "@/pages/NotFound";
 
 const routes = [
     {
@@ -30,6 +31,11 @@ const routes = [
         name: 'Contact',
         path: '/contact',
         component: Contact
+    },
+    {
+        name: 'NotFound',
+        path: '/:catchAll(.*)', // Catch-all route
+        component: NotFound
     }
 ];
 
