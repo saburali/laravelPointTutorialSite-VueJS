@@ -3,4 +3,7 @@ import App from './App.vue'
 
 import router from "@/routes";
 
-createApp(App).use(router).mount('#app')
+import {createHead} from "@vueuse/head";
+const head = createHead()
+
+createApp(App).use(head).use(router).mount('#app')
