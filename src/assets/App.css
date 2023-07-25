@@ -18,10 +18,10 @@ body {
     background: linear-gradient(to right, #F5EFEF, #FEADA6);
 }
 
-.hero-section .br-title-container .ok:nth-child(2) {
+.hero-section .br-title-container .word-break:nth-child(2) {
     color: var(--themeColor);
 }
-.hero-section .br-title-container .ok:nth-child(3) {
+.hero-section .br-title-container .word-break:nth-child(3) {
     display: block;
 }
 

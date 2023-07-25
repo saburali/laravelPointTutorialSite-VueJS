@@ -74,7 +74,7 @@ export default {
       const words = this.title.split(" ");
       if (words.length >= 2) {
         const highlightedWords = words.map(word => {
-          return `<span class="ok">${word}</span>`;
+          return `<span class="word-break">${word}</span>`;
         });
         return [ ...highlightedWords].join(" ");
       } else {
