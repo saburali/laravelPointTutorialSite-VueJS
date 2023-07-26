@@ -43,6 +43,27 @@
         </div>
       </div>
     </div>
+
+    <!-- Programming Challenges -->
+    <div class="py-5">
+      <div class="container py-0 py-lg-5">
+        <h2 class="fw-bold fs-60 fs-32-mx-767 text-center"> Level Up Your Skills with <br /> Programming Challenges </h2>
+        <p class="m-0 text-secondary text-center"> Get ready to embark on a thrilling journey of problem-solving and sharpen your Laravel expertise. </p>
+
+        <div class="row mt-5 programming-challenge-card">
+          <div class="col-12 col-sm-6 col-md-4 mb-4 mb-lg-0" v-for="item in programmingChallenges" :key="item.id">
+            <ProgrammingChallenge
+              :title="item.title"
+              :sub_title="item.sub_title"
+              :desc="item.desc"
+              :btn_title="item.btn_title"
+              :btn_route="item.btn_route"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -51,10 +72,11 @@ import { reactive } from "vue";
 import { useHead } from "@vueuse/head";
 import HeroComponents from "@/components/Hero";
 import EmpoweringLaravelDevelopers from "@/components/EmpoweringLaravelDevelopers";
+import ProgrammingChallenge from "@/components/ProgrammingChallenge";
 
 export default {
   name: "HomePage",
-  components: {EmpoweringLaravelDevelopers, HeroComponents},
+  components: {ProgrammingChallenge, EmpoweringLaravelDevelopers, HeroComponents},
   setup() {
     const siteData = reactive({
       title: `Laravel Point`,
@@ -104,6 +126,32 @@ export default {
           desc: "Lorem ipsum dolor sit amet consectetur. Posuere sapien et pellentesque morbi sed viverra leo id. Rhoncus mattis nibh orci commodo leo.",
           btn_name: "Get Started",
           destination: "/home",
+        },
+      ],
+      programmingChallenges: [
+        {
+          id: 1,
+          title: "Easy",
+          sub_title: "Return the Next Number from the Integer Passed",
+          desc: "Lorem ipsum dolor sit amet consectetur. Interdum platea sodales semper venenatis quam scelerisque tincidunt.",
+          btn_title: "Solve Challenge",
+          btn_route: "/contact",
+        },
+        {
+          id: 2,
+          title: "Medium",
+          sub_title: "Return the sum of Two Numbers",
+          desc: "Lorem ipsum dolor sit amet consectetur. Interdum platea sodales semper venenatis quam scelerisque tincidunt.",
+          btn_title: "Solve Challenge",
+          btn_route: "/contact",
+        },
+        {
+          id: 3,
+          title: "Hard",
+          sub_title: "Find The Perimeter of A Rectangle",
+          desc: "Lorem ipsum dolor sit amet consectetur. Interdum platea sodales semper venenatis quam scelerisque tincidunt.",
+          btn_title: "Solve Challenge",
+          btn_route: "/contact",
         },
       ]
     }

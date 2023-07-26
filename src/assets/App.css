@@ -90,31 +90,26 @@ body {
     color: var(--themeColor);
 }
 
-.gradient-color {
-
-}
-
-.gradient-color-1 {
+.programming-challenge-card .col-12:nth-child(1) .card h2 {
     background: linear-gradient(to right, #D4FC79, #96E6A1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px white;
 }
 
-.gradient-color-2 {
+.programming-challenge-card .col-12:nth-child(2) .card h2 {
     background: linear-gradient(to right, #F6D365, #FDA085);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px white;
 }
 
-.gradient-color-3 {
+.programming-challenge-card .col-12:nth-child(3) .card h2 {
     background: linear-gradient(to right, #F99185, #B12A5B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px white;
 }
-
 
 /* Background Color */
 .section-light-deep {
@@ -125,15 +120,15 @@ body {
     background: linear-gradient(130deg, rgba(255, 255, 255, 0.80), rgba(255, 255, 255, 0));
 }
 
-.gradient-bg-2 {
+.programming-challenge-card .col-12:nth-child(1) .card .card-img-top {
     background: linear-gradient(130deg, #84FAB0, #8FD3F4);
 }
 
-.gradient-bg-3 {
+.programming-challenge-card .col-12:nth-child(2) .card .card-img-top {
     background: linear-gradient(130deg, #F6D365, #FDA085);
 }
 
-.gradient-bg-4 {
+.programming-challenge-card .col-12:nth-child(3) .card .card-img-top {
     background: linear-gradient(130deg, #F99185, #B12A5B);
 }
 
@@ -233,6 +228,10 @@ body {
 }
 
 /* Height */
+.h-22 {
+    height: 22px;
+}
+
 .h-50p {
     height: 50px;
 }
@@ -372,6 +371,15 @@ body {
         top: 0;
         background-color: #ffffff !important;
         box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
+    }
+
+    .programming-challenge-card .card h5 {
+        width: 60%;
+        margin: auto;
+    }
+
+    .programming-challenge-card .col-12:nth-child(1) .card h5 {
+        width: 70%;
     }
 }
 
