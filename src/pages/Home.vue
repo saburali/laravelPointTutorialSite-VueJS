@@ -161,6 +161,24 @@
         </div>
       </div>
     </div>
+
+    <!-- Subscribe -->
+    <div class="py-5 section-light-deep">
+      <div class="container py-0 py-lg-5 text-center">
+        <h2 class="fs-60 fs-32-mx-767"> Join our community </h2>
+        <p> Work smarter with this time management and not hard, join our newsletter for a better experience </p>
+        <div class="col-12 col-sm-6 m-auto">
+          <form action="#" class="position-relative">
+            <label class="w-100">
+              <input class="form-control h-50p bg-white border-0 pl-50 box-shadow-0" type="text" placeholder="Enter your email address" />
+              <span class="position-absolute top-9 left-17 fs-20"> @ </span>
+            </label>
+            <button class="btn btn-dark position-absolute w-150 right-5 top-6"> Get started now </button>
+          </form>
+        </div>
+        <p class="m-0 pt-3"> No ads. No trails. No commitments </p>
+      </div>
+    </div>
   </div>
 </template>
 
