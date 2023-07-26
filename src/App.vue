@@ -1,15 +1,13 @@
 <template>
-  <router-link to="/"> Home </router-link>
-  <router-link to="/tutorials"> Tutorials </router-link>
-  <router-link to="/practice"> Practice </router-link>
-  <router-link to="/challenges"> Challenges </router-link>
-  <router-link to="/contact"> Contact </router-link>
+  <NavbarComponents/>
   <router-view></router-view>
 </template>
 
 <script>
+import NavbarComponents from "@/components/Navbar";
 export default {
   name: 'App',
+  components: {NavbarComponents},
 }
 </script>
 

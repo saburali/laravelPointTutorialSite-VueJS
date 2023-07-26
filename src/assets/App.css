@@ -12,6 +12,11 @@ body {
     font-family: 'Urbanist', sans-serif;
 }
 
+/* Navbar */
+.navbar-fixed .navbar {
+    background-color: white !important;
+}
+
 /* Hero Section */
 .hero-section {
     min-height: 100vh;
@@ -374,6 +379,10 @@ body {
     .take-skill .col-12:last-child {
         margin-bottom: 0 !important;
     }
+
+    .navbar-brand img {
+        height: 40px;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -410,6 +419,6 @@ body {
 
 @media only screen and (max-width: 767px) {
     .hero-section {
-        padding-top: 50px;
+        padding-top: 90px;
     }
 }
