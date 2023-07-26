@@ -132,6 +132,35 @@
         </div>
       </div>
     </div>
+
+    <!-- Take Your Laravel Skills to New Heights -->
+    <div class="py-5">
+      <div class="container py-0 py-lg-5">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <h2 class="fw-bold fs-60 fs-32-mx-767 m-0"> Take Your Laravel Skills to New Heights </h2>
+          </div>
+          <div class="col-12 col-lg-6 d-flex align-items-center justify-content-end">
+            <p class="m-0 text-secondary text-end"> Enroll in our Premium Courses and <br /> unlock the full potential of Laravel development. </p>
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="row mt-5 take-skill">
+          <div class="col-12 col-sm-6 col-md-4 mb-4 mb-lg-0" v-for="item in takeSkills" :key="item.id">
+            <TakeYourLaravelSkills
+              :image="item.image"
+              :image_alt="item.image_alt"
+              :title="item.title"
+              :topic="item.topic"
+              :user="item.user"
+              :price="item.price"
+              :rating="item.rating"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -144,10 +173,12 @@ import ProgrammingChallenge from "@/components/ProgrammingChallenge";
 import LatestInsightsExpertise from "@/components/LatestInsightsExpertise";
 import LearnersSayAbout from "@/components/LearnersSayAbout";
 import BrandsComponents from "@/components/Brands";
+import TakeYourLaravelSkills from "@/components/TakeYourLaravelSkills";
 
 export default {
   name: "HomePage",
   components: {
+    TakeYourLaravelSkills,
     BrandsComponents,
     LearnersSayAbout,
     LatestInsightsExpertise, ProgrammingChallenge, EmpoweringLaravelDevelopers, HeroComponents},
@@ -316,6 +347,38 @@ export default {
           id: 6,
           image: "brand-6.png",
           image_alt: "brand image",
+        }
+      ],
+      takeSkills: [
+        {
+          id: 1,
+          image: "image-1.jpg",
+          image_alt: "course img",
+          title: "Laravel Basic",
+          topic: "Development",
+          user: "3.1",
+          price: "9,00",
+          rating: "5",
+        },
+        {
+          id: 2,
+          image: "image-2.jpg",
+          image_alt: "course img",
+          title: "Laravel Mid Level",
+          topic: "Development",
+          user: "4",
+          price: "11,00",
+          rating: "4.7",
+        },
+        {
+          id: 3,
+          image: "image-3.jpg",
+          image_alt: "course img",
+          title: "Laravel Advanced",
+          topic: "Development",
+          user: "3.2",
+          price: "21,00",
+          rating: "4.5",
         }
       ]
     }
