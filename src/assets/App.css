@@ -362,6 +362,14 @@ body {
         border: 0;
         border-right: 0 solid rgba(204, 204, 204, 0);
     }
+
+    .learners-about .card {
+        border-bottom: 1px solid rgba(204, 204, 204, 1) !important;
+    }
+
+    .learners-about .col-12:last-child .card {
+        border-bottom: 0 solid rgba(204, 204, 204, 0) !important;
+    }
 }
 
 @media only screen and (min-width: 768px) {
