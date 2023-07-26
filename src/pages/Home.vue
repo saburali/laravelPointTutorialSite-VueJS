@@ -64,6 +64,34 @@
       </div>
     </div>
 
+    <!-- Latest Insights and Expertise -->
+    <div class="py-5 section-light-deep">
+      <div class="container py-0 py-lg-5">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <h2 class="fw-bold fs-60 fs-32-mx-767 m-0"> Latest Insights and Expertise </h2>
+          </div>
+          <div class="col-12 col-lg-6 d-flex align-items-center">
+            <p class="m-0 text-secondary"> Explore our collection of informative and thought-provoking articles, written by industry experts and seasoned Laravel developers.  </p>
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="row mt-5">
+          <div class="col-12 col-sm-6 col-md-4 mb-4 mb-lg-0" v-for="item in insightsExpertise" :key="item.id">
+            <LatestInsightsExpertise
+              :image="item.image"
+              :img_alt="item.img_alt"
+              :date="item.date"
+              :read_time="item.read_time"
+              :title="item.title"
+              :route="item.route"
+              :btn_title="item.btn_title"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -73,10 +101,11 @@ import { useHead } from "@vueuse/head";
 import HeroComponents from "@/components/Hero";
 import EmpoweringLaravelDevelopers from "@/components/EmpoweringLaravelDevelopers";
 import ProgrammingChallenge from "@/components/ProgrammingChallenge";
+import LatestInsightsExpertise from "@/components/LatestInsightsExpertise";
 
 export default {
   name: "HomePage",
-  components: {ProgrammingChallenge, EmpoweringLaravelDevelopers, HeroComponents},
+  components: {LatestInsightsExpertise, ProgrammingChallenge, EmpoweringLaravelDevelopers, HeroComponents},
   setup() {
     const siteData = reactive({
       title: `Laravel Point`,
@@ -153,6 +182,38 @@ export default {
           btn_title: "Solve Challenge",
           btn_route: "/contact",
         },
+      ],
+      insightsExpertise: [
+        {
+          id: 1,
+          image: "image-1.jpg",
+          img_alt: "Images One",
+          date: "May 15, 2023",
+          read_time: "5 min read",
+          title: "Mastering Laravel Routing: A Comprehensive Guide",
+          route: "/tutorials",
+          btn_title: "Solve Challenge",
+        },
+        {
+          id: 2,
+          image: "image-2.jpg",
+          img_alt: "Images two",
+          date: "Jun 17, 2023",
+          read_time: "8.5 min read",
+          title: "Building Scalable APIs with Laravel: Best Practices",
+          route: "/home",
+          btn_title: "Solve Challenge",
+        },
+        {
+          id: 3,
+          image: "image-3.jpg",
+          img_alt: "Images three",
+          date: "Aug 23, 2023",
+          read_time: "15 min read",
+          title: "Optimizing Performance in Laravel: Tips and Techniques",
+          route: "/",
+          btn_title: "Solve Challenge",
+        }
       ]
     }
   }
