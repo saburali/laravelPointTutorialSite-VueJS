@@ -115,6 +115,23 @@
         </div>
       </div>
     </div>
+
+    <!-- Brand -->
+    <div class="py-5 section-light-deep">
+      <div class="container py-0 py-lg-5">
+        <p class="fs-20 m-0 text-center"> Get hired by our very own recruiters </p>
+
+        <!-- Cards -->
+        <div class="row mt-3">
+          <div class="col-6 col-md-3 col-lg-2" v-for="item in brands" :key="item.id">
+            <BrandsComponents
+              :image="item.image"
+              :image_alt="item.image_alt"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -126,10 +143,12 @@ import EmpoweringLaravelDevelopers from "@/components/EmpoweringLaravelDeveloper
 import ProgrammingChallenge from "@/components/ProgrammingChallenge";
 import LatestInsightsExpertise from "@/components/LatestInsightsExpertise";
 import LearnersSayAbout from "@/components/LearnersSayAbout";
+import BrandsComponents from "@/components/Brands";
 
 export default {
   name: "HomePage",
   components: {
+    BrandsComponents,
     LearnersSayAbout,
     LatestInsightsExpertise, ProgrammingChallenge, EmpoweringLaravelDevelopers, HeroComponents},
   setup() {
@@ -265,6 +284,38 @@ export default {
           comment: "The easiest and most accurate way to track time across teams and finish the projects. Timely's automatic.",
           name: "Jasie D Costa",
           position: "Content Writer",
+        }
+      ],
+      brands: [
+        {
+          id: 1,
+          image: "brand-1.png",
+          image_alt: "brand image",
+        },
+        {
+          id: 2,
+          image: "brand-2.png",
+          image_alt: "brand image",
+        },
+        {
+          id: 3,
+          image: "brand-3.png",
+          image_alt: "brand image",
+        },
+        {
+          id: 4,
+          image: "brand-4.png",
+          image_alt: "brand image",
+        },
+        {
+          id: 5,
+          image: "brand-5.png",
+          image_alt: "brand image",
+        },
+        {
+          id: 6,
+          image: "brand-6.png",
+          image_alt: "brand image",
         }
       ]
     }
