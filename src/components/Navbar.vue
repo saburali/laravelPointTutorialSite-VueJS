@@ -16,10 +16,10 @@
             <li class="nav-item dropdown">
               <router-link to="/" class="nav-link fs-16 fw-600 text-uppercase dropdown-toggle" role="button" data-bs-toggle="dropdown"
                            aria-expanded="false">
-                Others
+                Tutorials
               </router-link>
               <ul class="dropdown-menu">
-                <li><router-link to="/" class="dropdown-item fs-16 fw-600 text-uppercase">ReactJS</router-link></li>
+                <li><router-link to="/free-tutorials" class="dropdown-item fs-16 fw-600 text-uppercase">Free Tutorials</router-link></li>
                 <li><router-link to="/" class="dropdown-item fs-16 fw-600 text-uppercase">VueJS</router-link></li>
                 <li><router-link to="/" class="dropdown-item fs-16 fw-600 text-uppercase">Laravel</router-link></li>
               </ul>
