@@ -4,6 +4,7 @@
 :root {
     --themeColor: #ff2d20;
     --secLightDeep: #F6F3FE;
+    --dark-gray: #5f5f5f;
 }
 
 body {
@@ -98,6 +99,10 @@ body {
 /* Color */
 .themeColor {
     color: var(--themeColor);
+}
+
+.text-dark-gray {
+    color: var(--dark-gray);
 }
 
 .programming-challenge-card .col-12:nth-child(1) .card h2 {
