@@ -9,6 +9,67 @@
       current_route_name="Free Tutorials"
     />
 
+    <!-- Free Tutorials -->
+    <div class="py-5">
+      <div class="container py-0 py-lg-5">
+        <div class="row mb-5">
+          <div class="col-12 col-lg-6">
+            <h2 class="fw-bold fs-60 fs-32-mx-767 m-0"> Free Tutorials </h2>
+          </div>
+          <div class="col-12 col-lg-6 d-flex align-items-center justify-content-lg-end justify-content-md-center">
+            <p class="m-0 text-secondary text-end"> Dive into our collection of free tutorials and embark on a journey
+              <br> of continuous learning and growth.  </p>
+          </div>
+        </div>
+
+        <form action="">
+          <div class="d-flex justify-content-between filter-select mt-4">
+            <select class="form-select px-4 py-3" v-model="instructor" aria-label="Default select example">
+              <option v-for="instructorOption in instructorOptions" :key="instructorOption.value" :value="instructorOption.value" :disabled="instructorOption.value === 1">
+                {{ instructorOption.label }}
+              </option>
+            </select>
+
+            <select class="form-select px-4 py-3" v-model="course" aria-label="Default select example">
+              <option v-for="courseOption in courseOptions" :key="courseOption.value" :value="courseOption.value" :disabled="courseOption.value === 1">
+                {{ courseOption.label }}
+              </option>
+            </select>
+
+            <select class="form-select px-4 py-3" v-model="view" aria-label="Default select example">
+              <option v-for="viewOption in viewOptions" :key="viewOption.value" :value="viewOption.value" :disabled="viewOption.value === 1">
+                {{ viewOption.label }}
+              </option>
+            </select>
+
+            <select class="form-select px-4 py-3" v-model="courseType" aria-label="Default select example">
+              <option v-for="courseTypeOption in courseTypeOptions" :key="courseTypeOption.value" :value="courseTypeOption.value" :disabled="courseTypeOption.value === 1">
+                {{ courseTypeOption.label }}
+              </option>
+            </select>
+
+            <select class="form-select px-4 py-3" v-model="date" aria-label="Default select example">
+              <option v-for="dateOption in dateOptions" :key="dateOption.value" :value="dateOption.value" :disabled="dateOption.value === 1">
+                {{ dateOption.label }}
+              </option>
+            </select>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-6 col-md-4 col-lg-3" v-for="course in courses" :key="course.id">
+              <CourseCard
+                :image="course.image"
+                :img_alt="course.img_alt"
+                :title="course.title"
+                :tag="course.tag"
+                :length="course.length"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <!-- Latest Insights and Expertise -->
     <div class="py-5 section-light-deep">
       <div class="container py-0 py-lg-5">
@@ -103,10 +164,11 @@ import SmallHero from "@/components/SmallHero";
 import LatestInsightsExpertise from "@/components/LatestInsightsExpertise";
 import LearnersSayAbout from "@/components/LearnersSayAbout";
 import BrandsComponents from "@/components/Brands";
+import CourseCard from "@/components/CourseCard";
 
 export default {
   name: "FreeTutorials",
-  components: {BrandsComponents, LearnersSayAbout, LatestInsightsExpertise, SmallHero},
+  components: {CourseCard, BrandsComponents, LearnersSayAbout, LatestInsightsExpertise, SmallHero},
   data() {
     return {
       insightsExpertise: [
@@ -199,11 +261,275 @@ export default {
           image_alt: "brand image",
         }
       ],
+      courses: [
+        {
+          id: 1,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "white-coding.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 2,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "course-card.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 3,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "laravel-img.png",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 4,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "white-coding.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 5,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "course-card.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 6,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "laravel-img.png",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 7,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "white-coding.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 8,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "course-card.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 9,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "laravel-img.png",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 10,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "white-coding.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 11,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "course-card.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 12,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "laravel-img.png",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 13,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "white-coding.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 14,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "course-card.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 15,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "laravel-img.png",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 16,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "white-coding.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 17,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "course-card.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 18,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "laravel-img.png",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 19,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "white-coding.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 20,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "course-card.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 21,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "laravel-img.png",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 22,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "white-coding.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 23,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "course-card.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 24,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "laravel-img.png",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+      ],
+      instructor: 1,
+      course: 1,
+      view: 1,
+      courseType: 1,
+      date: 1,
+      instructorOptions: [
+        { value: 1, label: "Instructor" },
+        { value: 2, label: "Rabbil Hasan" },
+        { value: 3, label: "Jhankar Mahbub" },
+        { value: 4, label: "Hasin Hyder" },
+        { value: 5, label: "Sumit" },
+      ],
+      courseOptions: [
+        { value: 1, label: "Course" },
+        { value: 2, label: "Laravel Basic" },
+        { value: 3, label: "ReactJS" },
+        { value: 4, label: "Vuejs" },
+      ],
+      viewOptions: [
+        { value: 1, label: "View" },
+        { value: 2, label: "Most Viewed" },
+        { value: 3, label: "Mid Viewed" },
+        { value: 4, label: "Low Viewed" },
+      ],
+      courseTypeOptions: [
+        { value: 1, label: "Course Type" },
+        { value: 2, label: "Free" },
+        { value: 3, label: "Paid" },
+      ],
+      dateOptions: [
+        { value: 1, label: "Date" },
+        { value: 2, label: "Newest" },
+        { value: 3, label: "Oldest" },
+      ],
     }
-  }
+  },
+  computed: {
+    // Add a computed property to filter and sort the tutorials based on selected options
+    filteredTutorials() {
+      // Implement your filtering and sorting logic here
+      // For example, you can filter tutorials based on the selected instructor, course, view, courseType, and date
+      // Then, return the filtered tutorials
+      return [];
+    },
+  },
+  watch: {
+    instructor() {
+      // React to the selected instructor change
+    },
+    course() {
+      // React to the selected course change
+    },
+    view() {
+      // React to the selected view change
+    },
+    courseType() {
+      // React to the selected courseType change
+    },
+    date() {
+      // React to the selected date change
+    },
+  },
 }
 </script>
 
 <style scoped>
+  .filter-select .form-select {
+    margin: 0 10px;
+  }
 
+  .filter-select .form-select:first-child {
+    margin-left: 0;
+  }
+
+  .filter-select .form-select:last-child {
+    margin-right: 0;
+  }
 </style>
