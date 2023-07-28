@@ -135,6 +135,10 @@ body {
     background: linear-gradient(130deg, rgba(255, 255, 255, 0.80), rgba(255, 255, 255, 0));
 }
 
+.gradient-bg-2 {
+    background: linear-gradient(to right, rgba(245, 239, 239, 0.6), #acacac);
+}
+
 .programming-challenge-card .col-12:nth-child(1) .card .card-img-top {
     background: linear-gradient(130deg, #84FAB0, #8FD3F4);
 }

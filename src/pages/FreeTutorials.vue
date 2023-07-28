@@ -62,7 +62,7 @@
     </div>
 
     <!-- Brand -->
-    <div class="py-5 section-light-deep">
+    <div class="py-5">
       <div class="container py-0 py-lg-5">
         <p class="fs-20 m-0 text-center"> Get hired by our very own recruiters </p>
 
@@ -79,7 +79,7 @@
     </div>
 
     <!-- Join Community -->
-    <div class="py-5">
+    <div class="py-5 gradient-bg-2">
       <div class="container py-0 py-lg-5 text-center">
         <h2 class="fs-60 fs-32-mx-767"> Join our community </h2>
         <p> Work smarter with this time management and not hard, join our newsletter for a better experience </p>
