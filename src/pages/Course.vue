@@ -154,16 +154,40 @@
       </div>
     </div>
   </div>
+
+  <!-- Our Learners Say About -->
+  <div class="py-5">
+    <div class="container my-0 my-lg-5">
+      <h2 class="fw-bold fs-60 fs-32-mx-767 m-0 text-center"> Hear What Our Learners Say <br /> About LaravelPoint </h2>
+      <p class="m-0 text-secondary text-center"> Don't just take our word for it – read what our learners have to say about their experiences with us. </p>
+
+      <!-- Cards -->
+      <div class="border rounded mt-5 p-4 learners-about">
+        <div class="row g-0">
+          <div class="col-12 col-sm-6 col-md-4 mb-4 mb-lg-0" v-for="item in learnersSayAbout" :key="item.id">
+            <LearnersSayAbout
+                :image="item.image"
+                :image_alt="item.image_alt"
+                :comment="item.comment"
+                :name="item.name"
+                :position="item.position"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 import SmallHero from "@/components/SmallHero";
 import TakeYourLaravelSkills from "@/components/CourseCard3";
 import CourseCard2 from "@/components/CourseCard2";
+import LearnersSayAbout from "@/components/LearnersSayAbout";
 
 export default {
   name: "CoursePage",
-  components: {CourseCard2, TakeYourLaravelSkills, SmallHero},
+  components: {LearnersSayAbout, CourseCard2, TakeYourLaravelSkills, SmallHero},
 
   data() {
     return {
@@ -361,7 +385,35 @@ export default {
           price: "21,00",
           rating: "4.5",
         }
-      ]
+      ],
+
+      // About Say
+      learnersSayAbout: [
+        {
+          id: 1,
+          image: "learners-1.jpg",
+          image_alt: "learners 1",
+          comment: "The easiest and most accurate way to track time across teams and finish the projects. Timely's automatic.",
+          name: "Roney Khan",
+          position: "UX Designer",
+        },
+        {
+          id: 2,
+          image: "learners-2.jpg",
+          image_alt: "learners 2",
+          comment: "The easiest and most accurate way to track time across teams and finish the projects. Timely's automatic.",
+          name: "Abeyan Roy",
+          position: "Frontend Designer",
+        },
+        {
+          id: 3,
+          image: "learners-3.jpg",
+          image_alt: "learners 3",
+          comment: "The easiest and most accurate way to track time across teams and finish the projects. Timely's automatic.",
+          name: "Jasie D Costa",
+          position: "Content Writer",
+        }
+      ],
     }
   },
   methods: {
