@@ -188,7 +188,7 @@ import { useHead } from "@vueuse/head";
 import HeroComponents from "@/components/Hero";
 import EmpoweringLaravelDevelopers from "@/components/EmpoweringLaravelDevelopers";
 import ProgrammingChallenge from "@/components/ProgrammingChallenge";
-import LatestInsightsExpertise from "@/components/LatestInsightsExpertise";
+import LatestInsightsExpertise from "@/components/CourseCard2";
 import LearnersSayAbout from "@/components/LearnersSayAbout";
 import BrandsComponents from "@/components/Brands";
 import TakeYourLaravelSkills from "@/components/TakeYourLaravelSkills";

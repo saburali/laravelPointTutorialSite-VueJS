@@ -143,7 +143,7 @@
         <!-- Cards -->
         <div class="row mt-5">
           <div class="col-12 col-sm-6 col-md-4 mb-4 mb-lg-0" v-for="item in insightsExpertise" :key="item.id">
-            <LatestInsightsExpertise
+            <CourseCard2
                 :image="item.image"
                 :img_alt="item.img_alt"
                 :date="item.date"
@@ -219,14 +219,14 @@
 
 <script>
 import SmallHero from "@/components/SmallHero";
-import LatestInsightsExpertise from "@/components/LatestInsightsExpertise";
+import CourseCard2 from "@/components/CourseCard2";
 import LearnersSayAbout from "@/components/LearnersSayAbout";
 import BrandsComponents from "@/components/Brands";
 import CourseCard from "@/components/CourseCard";
 
 export default {
   name: "FreeTutorials",
-  components: {CourseCard, BrandsComponents, LearnersSayAbout, LatestInsightsExpertise, SmallHero},
+  components: {CourseCard, BrandsComponents, LearnersSayAbout, CourseCard2, SmallHero},
   data() {
     return {
       insightsExpertise: [
