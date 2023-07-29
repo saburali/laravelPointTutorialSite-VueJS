@@ -125,15 +125,45 @@
       </div>
     </div>
   </div>
+
+  <!-- Latest Insights and Expertise -->
+  <div class="py-5 section-light-deep">
+    <div class="container py-0 py-lg-5">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <h2 class="fw-bold fs-60 fs-32-mx-767 m-0"> Latest Insights and Expertise </h2>
+        </div>
+        <div class="col-12 col-lg-6 d-flex align-items-center">
+          <p class="m-0 text-secondary"> Explore our collection of informative and thought-provoking articles, written by industry experts and seasoned Laravel developers.  </p>
+        </div>
+      </div>
+
+      <!-- Cards -->
+      <div class="row mt-5">
+        <div class="col-12 col-sm-6 col-md-4 mb-4 mb-lg-0" v-for="item in CourseCard2" :key="item.id">
+          <CourseCard2
+              :image="item.image"
+              :img_alt="item.img_alt"
+              :date="item.date"
+              :read_time="item.read_time"
+              :title="item.title"
+              :route="item.route"
+              :btn_title="item.btn_title"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 import SmallHero from "@/components/SmallHero";
 import TakeYourLaravelSkills from "@/components/CourseCard3";
+import CourseCard2 from "@/components/CourseCard2";
 
 export default {
   name: "CoursePage",
-  components: {TakeYourLaravelSkills, SmallHero},
+  components: {CourseCard2, TakeYourLaravelSkills, SmallHero},
 
   data() {
     return {
@@ -209,7 +239,7 @@ export default {
         }
       ],
 
-      // Course Card 2
+      // Course Card 3
       takeSkills: [
         {
           id: 1,
