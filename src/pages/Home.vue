@@ -78,8 +78,8 @@
 
         <!-- Cards -->
         <div class="row mt-5">
-          <div class="col-12 col-sm-6 col-md-4 mb-4 mb-lg-0" v-for="item in insightsExpertise" :key="item.id">
-            <LatestInsightsExpertise
+          <div class="col-12 col-sm-6 col-md-4 mb-4 mb-lg-0" v-for="item in CourseCard2" :key="item.id">
+            <CourseCard2
               :image="item.image"
               :img_alt="item.img_alt"
               :date="item.date"
@@ -188,10 +188,10 @@ import { useHead } from "@vueuse/head";
 import HeroComponents from "@/components/Hero";
 import EmpoweringLaravelDevelopers from "@/components/EmpoweringLaravelDevelopers";
 import ProgrammingChallenge from "@/components/ProgrammingChallenge";
-import LatestInsightsExpertise from "@/components/CourseCard2";
+import CourseCard2 from "@/components/CourseCard2";
 import LearnersSayAbout from "@/components/LearnersSayAbout";
 import BrandsComponents from "@/components/Brands";
-import TakeYourLaravelSkills from "@/components/TakeYourLaravelSkills";
+import TakeYourLaravelSkills from "@/components/CourseCard3";
 
 export default {
   name: "HomePage",
@@ -199,7 +199,7 @@ export default {
     TakeYourLaravelSkills,
     BrandsComponents,
     LearnersSayAbout,
-    LatestInsightsExpertise, ProgrammingChallenge, EmpoweringLaravelDevelopers, HeroComponents},
+    CourseCard2, ProgrammingChallenge, EmpoweringLaravelDevelopers, HeroComponents},
   setup() {
     const siteData = reactive({
       title: `Laravel Point`,
@@ -277,7 +277,7 @@ export default {
           btn_route: "/contact",
         },
       ],
-      insightsExpertise: [
+      CourseCard2: [
         {
           id: 1,
           image: "image-1.jpg",
