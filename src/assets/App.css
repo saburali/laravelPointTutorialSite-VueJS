@@ -425,6 +425,21 @@ body {
     .navbar-brand img {
         height: 40px;
     }
+
+    .fs-14-mx-767 {
+        font-size: 14px;
+    }
+
+    .pagination-container .d-flex {
+        text-align: center;
+        display: block !important;
+    }
+
+    .pagination-container .pagination {
+        display: flex;
+        margin-top: 10px;
+        justify-content: center;
+    }
 }
 
 @media only screen and (min-width: 768px) {
