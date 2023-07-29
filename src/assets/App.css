@@ -109,21 +109,21 @@ body {
     background-color: rgba(255, 45, 32, 0.15);
 }
 
-.programming-challenge-card .col-12:nth-child(1) .card h2 {
+.programming-challenge-card .col-12:nth-child(2n + 1) .card h2 {
     background: linear-gradient(to right, #D4FC79, #96E6A1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px white;
 }
 
-.programming-challenge-card .col-12:nth-child(2) .card h2 {
+.programming-challenge-card .col-12:nth-child(2n + 2) .card h2 {
     background: linear-gradient(to right, #F6D365, #FDA085);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px white;
 }
 
-.programming-challenge-card .col-12:nth-child(3) .card h2 {
+.programming-challenge-card .col-12:nth-child(2n + 3) .card h2 {
     background: linear-gradient(to right, #F99185, #B12A5B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -151,15 +151,15 @@ body {
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
 }
 
-.programming-challenge-card .col-12:nth-child(1) .card .card-img-top {
+.programming-challenge-card .col-12:nth-child(2n + 1) .card .card-img-top {
     background: linear-gradient(130deg, #84FAB0, #8FD3F4);
 }
 
-.programming-challenge-card .col-12:nth-child(2) .card .card-img-top {
+.programming-challenge-card .col-12:nth-child(2n + 2) .card .card-img-top {
     background: linear-gradient(130deg, #F6D365, #FDA085);
 }
 
-.programming-challenge-card .col-12:nth-child(3) .card .card-img-top {
+.programming-challenge-card .col-12:nth-child(2n + 3) .card .card-img-top {
     background: linear-gradient(130deg, #F99185, #B12A5B);
 }
 
@@ -552,13 +552,21 @@ body {
         box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
     }
 
-    .programming-challenge-card .card h5 {
-        width: 60%;
-        margin: auto;
+    .filter-select .form-select {
+        max-width: 250px;
     }
 
-    .programming-challenge-card .col-12:nth-child(1) .card h5 {
-        width: 70%;
+    /* 2 line three dots... */
+    .two-line-three-dots {
+        text-align: justify;
+        width: 100%;
+        height: 60px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
     }
 }
 
