@@ -25,7 +25,7 @@
         <form action="">
           <div class="tutorialFilterContainer">
             <button @click="iconToggleBtn"
-                    :class="['btn', 'btn-primary', 'filter-showHide-btn', { 'icon-rotate': isIconRotated }]"
+                    :class="['btn', 'themeBG', 'text-white', 'filter-showHide-btn', { 'icon-rotate': isIconRotated }]"
                     type="button" data-bs-toggle="collapse" data-bs-target="#FilteringCollapse" aria-expanded="false"
                     aria-controls="FilteringCollapse">
               <i class="fas fa-bars me-1"></i> Filter Options

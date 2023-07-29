@@ -131,6 +131,10 @@ body {
 }
 
 /* Background Color */
+.themeBG {
+    background-color: var(--themeColor);
+}
+
 .section-light-deep {
     background-color: var(--secLightDeep);
 }
