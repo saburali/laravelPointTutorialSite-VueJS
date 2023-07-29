@@ -97,6 +97,10 @@ export default {
 }
 
 @media only screen and (max-width: 475px) {
+  .small-hero-section {
+    padding-top: 70px;
+  }
+
   .small-hero-section h2 {
     font-size: 32px;
   }
