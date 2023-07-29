@@ -177,6 +177,41 @@
       </div>
     </div>
   </div>
+
+  <!-- Brand -->
+  <div class="py-5 gradient-bg-2">
+    <div class="container py-0 py-lg-5">
+      <p class="fs-20 m-0 text-center"> Get hired by our very own recruiters </p>
+
+      <!-- Cards -->
+      <div class="row mt-3">
+        <div class="col-6 col-md-3 col-lg-2" v-for="item in brands" :key="item.id">
+          <BrandsComponents
+              :image="item.image"
+              :image_alt="item.image_alt"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subscribe -->
+  <div class="py-5 section-light-deep">
+    <div class="container py-0 py-lg-5 text-center">
+      <h2 class="fs-60 fs-32-mx-767"> Join our community </h2>
+      <p> Work smarter with this time management and not hard, join our newsletter for a better experience </p>
+      <div class="col-12 col-sm-6 m-auto">
+        <form action="#" class="position-relative">
+          <label class="w-100">
+            <input class="form-control h-50p bg-white border-0 pl-50 box-shadow-0" type="text" placeholder="Enter your email address" />
+            <span class="position-absolute top-9 left-17 fs-20"> @ </span>
+          </label>
+          <button class="btn btn-dark position-absolute w-150 right-5 top-6"> Get started now </button>
+        </form>
+      </div>
+      <p class="m-0 pt-3"> No ads. No trails. No commitments </p>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -184,10 +219,11 @@ import SmallHero from "@/components/SmallHero";
 import TakeYourLaravelSkills from "@/components/CourseCard3";
 import CourseCard2 from "@/components/CourseCard2";
 import LearnersSayAbout from "@/components/LearnersSayAbout";
+import BrandsComponents from "@/components/Brands";
 
 export default {
   name: "CoursePage",
-  components: {LearnersSayAbout, CourseCard2, TakeYourLaravelSkills, SmallHero},
+  components: {BrandsComponents, LearnersSayAbout, CourseCard2, TakeYourLaravelSkills, SmallHero},
 
   data() {
     return {
@@ -412,6 +448,40 @@ export default {
           comment: "The easiest and most accurate way to track time across teams and finish the projects. Timely's automatic.",
           name: "Jasie D Costa",
           position: "Content Writer",
+        }
+      ],
+
+      // Brand
+      brands: [
+        {
+          id: 1,
+          image: "brand-1.png",
+          image_alt: "brand image",
+        },
+        {
+          id: 2,
+          image: "brand-2.png",
+          image_alt: "brand image",
+        },
+        {
+          id: 3,
+          image: "brand-3.png",
+          image_alt: "brand image",
+        },
+        {
+          id: 4,
+          image: "brand-4.png",
+          image_alt: "brand image",
+        },
+        {
+          id: 5,
+          image: "brand-5.png",
+          image_alt: "brand image",
+        },
+        {
+          id: 6,
+          image: "brand-6.png",
+          image_alt: "brand image",
         }
       ],
     }
