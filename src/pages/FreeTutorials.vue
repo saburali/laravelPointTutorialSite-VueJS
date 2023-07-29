@@ -659,7 +659,7 @@ export default {
     }
   }
 
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 575px) {
     .filter-select .form-select {
       margin: 10px 0 !important;
     }
