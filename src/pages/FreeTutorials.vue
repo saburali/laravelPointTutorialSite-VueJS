@@ -36,7 +36,7 @@
               <div class="card card-body filter-item-body">
                 <h2 class="section-title filter-title">Filter Options</h2>
 
-                <div class="d-flex justify-content-between filter-select mt-4">
+                <div class="d-block d-lg-flex justify-content-between filter-select mt-3 mt-md-4">
                   <select class="form-select px-4 py-3" v-model="instructor" aria-label="Default select example">
                     <option v-for="instructorOption in instructorOptions" :key="instructorOption.value"
                             :value="instructorOption.value" :disabled="instructorOption.value === 1">
@@ -656,6 +656,12 @@ export default {
 
     .tutorialFilterContainer .collapse:not(.show) {
       display: block !important;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    .filter-select .form-select {
+      margin: 10px 0 !important;
     }
   }
 </style>
