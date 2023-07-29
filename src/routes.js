@@ -7,6 +7,7 @@ import Challenges from "@/pages/Challenges";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
 import FreeTutorials from "@/pages/FreeTutorials";
+import CoursePage from "@/pages/Course";
 
 const routes = [
     {
@@ -28,6 +29,11 @@ const routes = [
         name: 'FreeTutorials',
         path: '/free-tutorials',
         component: FreeTutorials
+    },
+    {
+        name: 'Course',
+        path: '/course',
+        component: CoursePage
     },
     {
         name: 'Practice',

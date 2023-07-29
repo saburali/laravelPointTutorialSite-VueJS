@@ -28,7 +28,7 @@
               <router-link to="/challenges" class="nav-link fs-16 fw-600 text-uppercase">Challenges</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/tutorials" class="nav-link fs-16 fw-600 text-uppercase">Tutorials</router-link>
+              <router-link to="/course" class="nav-link fs-16 fw-600 text-uppercase">Course</router-link>
             </li>
             <li class="nav-item">
               <router-link to="/practice" class="nav-link fs-16 fw-600 text-uppercase">Practice</router-link>
