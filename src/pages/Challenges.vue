@@ -1,15 +1,24 @@
 <template>
   <div>
-    <h1>Challenges Page</h1>
+    <!-- Small Hero -->
+    <SmallHero
+      title="Level Up Your Skill"
+      route="/home"
+      route_name="Home"
+      current_route="/challenges"
+      current_route_name="Challenges"
+    />
   </div>
 </template>
 
 <script>
 import { reactive } from "vue";
 import { useHead } from "@vueuse/head";
+import SmallHero from "@/components/SmallHero";
 
 export default {
   name: "ChallengePage",
+  components: {SmallHero},
   setup() {
     const siteData = reactive({
       title: `Challenge || Laravel Point`,
