@@ -10,15 +10,15 @@
     />
 
     <!-- Free Tutorials -->
-    <div class="py-5">
+    <div class="py-3 py-lg-5">
       <div class="container py-0 py-lg-5">
-        <div class="row mb-5">
+        <div class="row mb-3 mb-lg-5">
           <div class="col-12 col-lg-6">
-            <h2 class="fw-bold fs-60 fs-32-mx-767 m-0"> Free Tutorials </h2>
+            <h2 class="fw-bold fs-60 fs-32-mx-767 m-0 text-center-mx-767"> Free Tutorials </h2>
           </div>
-          <div class="col-12 col-lg-6 d-flex align-items-center justify-content-lg-end justify-content-md-center">
-            <p class="m-0 text-secondary text-end"> Dive into our collection of free tutorials and embark on a journey
-              <br> of continuous learning and growth.  </p>
+          <div class="col-12 col-lg-6 text-center-mx-767 d-block d-lg-flex align-items-center justify-content-lg-end justify-content-md-center">
+            <p class="m-0 text-secondary text-center text-lg-end"> Dive into our collection of free tutorials and embark on a journey
+              <br> of continuous learning and growth. </p>
           </div>
         </div>
 
@@ -77,14 +77,14 @@
           </div>
 
           <!-- Course Card -->
-          <div class="row mt-5">
+          <div class="row mt-3 mt-lg-5">
             <div class="col-6 col-md-4 col-lg-3" v-for="course in courses" :key="course.id">
               <CourseCard
-                :image="course.image"
-                :img_alt="course.img_alt"
-                :title="course.title"
-                :tag="course.tag"
-                :length="course.length"
+                  :image="course.image"
+                  :img_alt="course.img_alt"
+                  :title="course.title"
+                  :tag="course.tag"
+                  :length="course.length"
               />
             </div>
           </div>
