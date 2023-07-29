@@ -23,36 +23,57 @@
         </div>
 
         <form action="">
-          <div class="d-flex justify-content-between filter-select mt-4">
-            <select class="form-select px-4 py-3" v-model="instructor" aria-label="Default select example">
-              <option v-for="instructorOption in instructorOptions" :key="instructorOption.value" :value="instructorOption.value" :disabled="instructorOption.value === 1">
-                {{ instructorOption.label }}
-              </option>
-            </select>
+          <div class="tutorialFilterContainer">
+            <button @click="iconToggleBtn"
+                    :class="['btn', 'btn-primary', 'filter-showHide-btn', { 'icon-rotate': isIconRotated }]"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#FilteringCollapse" aria-expanded="false"
+                    aria-controls="FilteringCollapse">
+              <i class="fas fa-bars me-1"></i> Filter Options
+              <i class="fas fas fa-arrow-right"></i>
+            </button>
 
-            <select class="form-select px-4 py-3" v-model="course" aria-label="Default select example">
-              <option v-for="courseOption in courseOptions" :key="courseOption.value" :value="courseOption.value" :disabled="courseOption.value === 1">
-                {{ courseOption.label }}
-              </option>
-            </select>
+            <div class="collapse" id="FilteringCollapse">
+              <div class="card card-body filter-item-body">
+                <h2 class="section-title filter-title">Filter Options</h2>
 
-            <select class="form-select px-4 py-3" v-model="view" aria-label="Default select example">
-              <option v-for="viewOption in viewOptions" :key="viewOption.value" :value="viewOption.value" :disabled="viewOption.value === 1">
-                {{ viewOption.label }}
-              </option>
-            </select>
+                <div class="d-flex justify-content-between filter-select mt-4">
+                  <select class="form-select px-4 py-3" v-model="instructor" aria-label="Default select example">
+                    <option v-for="instructorOption in instructorOptions" :key="instructorOption.value"
+                            :value="instructorOption.value" :disabled="instructorOption.value === 1">
+                      {{ instructorOption.label }}
+                    </option>
+                  </select>
 
-            <select class="form-select px-4 py-3" v-model="courseType" aria-label="Default select example">
-              <option v-for="courseTypeOption in courseTypeOptions" :key="courseTypeOption.value" :value="courseTypeOption.value" :disabled="courseTypeOption.value === 1">
-                {{ courseTypeOption.label }}
-              </option>
-            </select>
+                  <select class="form-select px-4 py-3" v-model="course" aria-label="Default select example">
+                    <option v-for="courseOption in courseOptions" :key="courseOption.value" :value="courseOption.value"
+                            :disabled="courseOption.value === 1">
+                      {{ courseOption.label }}
+                    </option>
+                  </select>
 
-            <select class="form-select px-4 py-3" v-model="date" aria-label="Default select example">
-              <option v-for="dateOption in dateOptions" :key="dateOption.value" :value="dateOption.value" :disabled="dateOption.value === 1">
-                {{ dateOption.label }}
-              </option>
-            </select>
+                  <select class="form-select px-4 py-3" v-model="view" aria-label="Default select example">
+                    <option v-for="viewOption in viewOptions" :key="viewOption.value" :value="viewOption.value"
+                            :disabled="viewOption.value === 1">
+                      {{ viewOption.label }}
+                    </option>
+                  </select>
+
+                  <select class="form-select px-4 py-3" v-model="courseType" aria-label="Default select example">
+                    <option v-for="courseTypeOption in courseTypeOptions" :key="courseTypeOption.value"
+                            :value="courseTypeOption.value" :disabled="courseTypeOption.value === 1">
+                      {{ courseTypeOption.label }}
+                    </option>
+                  </select>
+
+                  <select class="form-select px-4 py-3" v-model="date" aria-label="Default select example">
+                    <option v-for="dateOption in dateOptions" :key="dateOption.value" :value="dateOption.value"
+                            :disabled="dateOption.value === 1">
+                      {{ dateOption.label }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Course Card -->
@@ -526,6 +547,9 @@ export default {
         { value: 2, label: "Newest" },
         { value: 3, label: "Oldest" },
       ],
+
+      // Filter Options Collapse
+      isIconRotated: false,
     }
   },
   computed: {
@@ -554,6 +578,13 @@ export default {
       // React to the selected date change
     },
   },
+
+  methods: {
+    // Filter Options Collapse
+    iconToggleBtn() {
+      this.isIconRotated = !this.isIconRotated;
+    },
+  },
 }
 </script>
 
@@ -573,5 +604,58 @@ export default {
   .pagination .page-item.active .page-link {
     border-color: var(--themeColor) !important;
     background-color: var(--themeColor) !important;
+  }
+
+  /* Filter Options Collapse */
+  .tutorialFilterContainer .filter-showHide-btn {
+    width: 100%;
+    margin-top: 0;
+    display: block;
+    font-size: 14px;
+    text-align: start;
+    position: relative;
+    border-radius: 8px;
+    padding: 14px 26px 8px 16px;
+  }
+
+  .tutorialFilterContainer .filter-showHide-btn:focus {
+    box-shadow: none !important;
+  }
+
+  .tutorialFilterContainer .filter-showHide-btn .fa-arrow-right {
+    top: 15px;
+    right: 15px;
+    font-size: 14px;
+    position: absolute;
+    transform: rotate(90deg);
+    transition: 0.4s all ease-in-out;
+  }
+
+  .tutorialFilterContainer .filter-showHide-btn.icon-rotate .fa-arrow-right {
+    transform: rotate(270deg);
+    transition: 0.4s all ease-in-out;
+  }
+
+  .tutorialFilterContainer .filter-item-body {
+    border: 0 !important;
+    padding: 0 !important;
+  }
+
+  .tutorialFilterContainer .filter-title {
+    display: none;
+  }
+
+  .tutorialFilterContainer .collapse:not(.show) {
+    display: none !important;
+  }
+
+  @media only screen and (min-width: 576px) {
+    .tutorialFilterContainer .filter-showHide-btn {
+      display: none;
+    }
+
+    .tutorialFilterContainer .collapse:not(.show) {
+      display: block !important;
+    }
   }
 </style>
