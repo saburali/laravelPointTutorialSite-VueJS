@@ -87,6 +87,42 @@
           />
         </div>
       </div>
+
+      <!-- Pagination -->
+      <div class="pagination-container">
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="m-0 fs-14"> Showing 02 from 02 data </p>
+          <nav aria-label="navigation">
+            <ul class="pagination mt-3">
+              <li class="page-item">
+                <a class="page-link themeColor fs-14-mx-767" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link themeColor fs-14-mx-767" href="#">1</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link themeColor fs-14-mx-767" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link themeColor fs-14-mx-767" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link themeColor fs-14-mx-767" href="#">4</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link themeColor fs-14-mx-767" href="#">5</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link themeColor fs-14-mx-767" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
   </div>
 </template>
