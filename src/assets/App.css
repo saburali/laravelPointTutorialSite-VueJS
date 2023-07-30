@@ -148,7 +148,7 @@ body {
 }
 
 .gradient-bg-2 {
-    background: linear-gradient(to right, rgba(245, 239, 239, 0.6), #acacac);
+    background: linear-gradient(to right, rgb(245 239 239), #acacac42);
 }
 
 .gradient-bg-3 {

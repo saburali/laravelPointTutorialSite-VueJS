@@ -23,8 +23,8 @@
 
           <!-- Tags -->
           <div class="d-flex justify-content-start mt-3 mb-4">
-            <div class="themeBG px-3 py-1 text-white me-2 rounded fs-14"> Hard </div>
-            <div class="bg-danger px-3 py-1 text-white me-2 rounded fs-14"> <i class="fas fa-coins"></i> 10 Points </div>
+            <div class="themeBG p-2 text-white me-2 rounded fs-14"> Hard </div>
+            <div class="bg-success p-2 text-white me-2 rounded fs-14"> <i class="fas fa-coins"></i> 10 Points </div>
           </div>
 
           <!-- Details -->
@@ -46,15 +46,82 @@
         </div>
         <!-- Code -->
         <div class="tab-pane fade" id="pills-code" role="tabpanel" aria-labelledby="pills-code-tab" tabindex="0">
-          <h2> Code </h2>
+          <h2 class="fw-bold fs-60"> Return the Next Number from the Integer Passed </h2>
+
+          <!-- Tags -->
+          <div class="d-flex justify-content-start mt-3 mb-4">
+            <div class="themeBG p-2 text-white me-2 rounded fs-14"> Hard </div>
+            <div class="bg-success p-2 text-white me-2 rounded fs-14"> <i class="fas fa-coins"></i> 10 Points </div>
+          </div>
         </div>
         <!-- Resource -->
         <div class="tab-pane fade" id="pills-resource" role="tabpanel" aria-labelledby="pills-resource-tab" tabindex="0">
-          <h2> Resource </h2>
+          <h2 class="fw-bold fs-60"> Resource </h2>
+
+          <!-- Course Card -->
+          <div class="row mt-3 mt-lg-5">
+            <div class="col-6 col-md-4 col-lg-3" v-for="course in courses" :key="course.id">
+              <CourseCard
+                  :image="course.image"
+                  :img_alt="course.img_alt"
+                  :title="course.title"
+                  :tag="course.tag"
+                  :length="course.length"
+              />
+            </div>
+          </div>
         </div>
           <!-- Solutions -->
         <div class="tab-pane fade" id="pills-solutions" role="tabpanel" aria-labelledby="pills-solutions-tab" tabindex="0">
-          <h2> Solutions </h2>
+          <h2 class="fw-bold fs-60"> Solutions </h2>
+
+          <!-- Name -->
+          <p class="mb-3 themeBG px-2 py-1 text-white me-2 rounded-pill fs-14 d-inline-block"> Roney Khan </p>
+
+          <p class="mb-0" style="line-height: 32px"> Computers have their own language called <span class="themeColor"> Machine Code </span> which tells them what to do. As you can see, it doesn’t make a lot of sense to humans!
+            <br>
+            Each number or letter is telling the computer to change something in its <span class="themeColor"> memory </span>. This could be a number or word, or a little part of a picture or video. By themselves, computers don’t know how to do anything. It is the job of the programmer to give them instructions.
+            <br>
+            It is possible to learn Machine Code, but it would take a long time! Luckily there is an easier way to communicate with computers. </p>
+
+          <!-- Code Canvas -->
+          <div class="my-4 rounded-3" style="min-height: 200px; background-color: #2d2d2d"></div>
+
+          <!-- Pagination -->
+          <div class="pagination-container">
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="m-0 fs-14"> Showing 02 from 02 data </p>
+              <nav aria-label="navigation">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link themeColor fs-14-mx-767" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link themeColor fs-14-mx-767" href="#">1</a>
+                  </li>
+                  <li class="page-item active">
+                    <a class="page-link themeColor fs-14-mx-767" href="#">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link themeColor fs-14-mx-767" href="#">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link themeColor fs-14-mx-767" href="#">4</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link themeColor fs-14-mx-767" href="#">5</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link themeColor fs-14-mx-767" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -80,8 +147,210 @@
 </template>
 
 <script>
+import CourseCard from "@/components/CourseCard";
+
 export default {
-  name: "ChallengeSingleInstructions"
+  name: "ChallengeSingleInstructions",
+  components: {CourseCard},
+
+  data() {
+    return {
+      courses: [
+        {
+          id: 1,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "white-coding.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 2,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "course-card.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 3,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "laravel-img.png",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 4,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "white-coding.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 5,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "course-card.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 6,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "laravel-img.png",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 7,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "white-coding.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 8,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "course-card.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 9,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "laravel-img.png",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 10,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "white-coding.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 11,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "course-card.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 12,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "laravel-img.png",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 13,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "white-coding.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 14,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "course-card.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 15,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "laravel-img.png",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 16,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "white-coding.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 17,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "course-card.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 18,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "laravel-img.png",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 19,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "white-coding.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 20,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "course-card.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 21,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "laravel-img.png",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 22,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "white-coding.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 23,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "course-card.jpg",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+        {
+          id: 24,
+          title: "Introduction to Laravel - Rabbil Hasan",
+          image: "laravel-img.png",
+          img_alt: "Course Card Image",
+          tag: "Laravel",
+          length: "1h 12m",
+        },
+      ],
+    }
+  }
 }
 </script>
 
