@@ -31,22 +31,28 @@
                   </li>
                 </ul>
                 <div class="tab-content mt-4 pt-2" id="pills-tabContent">
+
+                  <!-- Sign In -->
                   <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab" tabindex="0">
                     <form>
                       <div class="mb-3">
                         <input type="email" class="form-control rounded-0" placeholder="Email Address" aria-describedby="emailHelp">
                       </div>
                       <div class="mb-3 position-relative">
-                        <a href="#" class="text-decoration-none show-password">
-                          <i class="fas fa-eye"></i>
+                        <a class="text-decoration-none show-password pointer-event"  @click="toggleShowPassword">
+                          <i :class="showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
                         </a>
-                        <input type="password" class="form-control rounded-0" placeholder="Password">
+                        <input class="form-control rounded-0" placeholder="Password"
+                           v-model="loginPassword"
+                           :type="showPassword ? 'text' : 'password'">
                       </div>
                       <div class="d-flex justify-content-center justify-content-md-end">
                         <button type="submit" class="btn px-4 rounded-0">Submit</button>
                       </div>
                     </form>
                   </div>
+
+                  <!-- Sign Up -->
                   <div class="tab-pane fade" id="pills-signup" role="tabpanel" aria-labelledby="pills-signup-tab" tabindex="0">
                     <form>
                       <div class="mb-3">
@@ -60,13 +66,23 @@
                       </div>
                       <div class="row g-3">
                         <div class="col">
-                          <div class="mb-3">
-                            <input type="password" class="form-control rounded-0" placeholder="Password">
+                          <div class="mb-3 position-relative">
+                            <a class="text-decoration-none show-password pointer-event"  @click="toggleShowPassword">
+                              <i :class="showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
+                            </a>
+                            <input class="form-control rounded-0" placeholder="Password" name="password"
+                             v-model="signupPassword"
+                             :type="showPassword ? 'text' : 'password'">
                           </div>
                         </div>
                         <div class="col">
-                          <div class="mb-3">
-                            <input type="password" class="form-control rounded-0" placeholder="Confirm Password">
+                          <div class="mb-3 position-relative">
+                            <a class="text-decoration-none show-password pointer-event"  @click="toggleShowPassword">
+                              <i :class="showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
+                            </a>
+                            <input class="form-control rounded-0" placeholder="Password" name="confirm-password"
+                             v-model="confirmPassword"
+                             :type="showPassword ? 'text' : 'password'">
                           </div>
                         </div>
                       </div>
@@ -98,7 +114,20 @@
 
 <script>
 export default {
-  name: "SignIn_SignUp"
+  name: "SignIn_SignUp",
+  data() {
+    return {
+      loginPassword: '',
+      signupPassword: '',
+      confirmPassword: '',
+      showPassword: false,
+    }
+  },
+  methods: {
+    toggleShowPassword() {
+      this.showPassword = !this.showPassword;
+    },
+  },
 }
 </script>
 
@@ -166,6 +195,7 @@ export default {
 }
 
 .get-started .show-password:hover {
+  cursor: pointer;
   color: var(--themeColor);
 }
 </style>
