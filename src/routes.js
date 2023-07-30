@@ -8,6 +8,7 @@ import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
 import FreeTutorials from "@/pages/FreeTutorials";
 import CoursePage from "@/pages/Course";
+import ChallengeSingleInstructions from "@/pages/ChallengeSingleInstructions";
 
 const routes = [
     {
@@ -44,6 +45,11 @@ const routes = [
         name: 'Challenges',
         path: '/challenges',
         component: Challenges
+    },
+    {
+        name: 'ChallengeSingleInstructions',
+        path: '/ChallengeSingleInstructions',
+        component: ChallengeSingleInstructions
     },
     {
         name: 'Contact',

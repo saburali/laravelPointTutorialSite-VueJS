@@ -18,6 +18,10 @@ body {
     background-color: white !important;
 }
 
+.navbar-space {
+    margin-top: 80px;
+}
+
 /* Hero Section */
 .hero-section {
     min-height: 100vh;
