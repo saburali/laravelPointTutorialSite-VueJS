@@ -132,35 +132,6 @@ export default {
 </script>
 
 <style scoped>
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  font-weight: bold;
-  position: relative;
-  color: var(--themeColor);
-}
-
-.nav-pills .nav-link:hover {
-  color: #5f5f5f;
-}
-
-.nav-pills .nav-link {
-  border-bottom: 2px solid #D8D8D8;
-}
-
-.nav-pills .nav-link.active::after {
-  content: "";
-  left: 0;
-  height: 2px;
-  width: 100%;
-  bottom: -2px;
-  position: absolute;
-  border-bottom: 2px solid var(--themeColor);
-}
-
-.modal-link {
-  color: var(--themeColor);
-  transition: all 0.4s ease-in-out;
-}
-
 .modal-link:hover {
   color: #2d2d2d;
 }
