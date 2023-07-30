@@ -163,6 +163,15 @@ body {
     background: linear-gradient(130deg, #F99185, #B12A5B);
 }
 
+/* Position */
+.top-0 {
+    top: 0;
+}
+
+.right-0 {
+    right: 0;
+}
+
 /* Background Images */
 .bg-image {
     background-position: right;
@@ -268,6 +277,11 @@ body {
 
 .left-17 {
     left: 17px;
+}
+
+/* Line Height */
+.lh-60 {
+    line-height: 60px;
 }
 
 /* Height */

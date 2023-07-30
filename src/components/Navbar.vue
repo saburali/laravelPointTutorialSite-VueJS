@@ -37,7 +37,7 @@
               <router-link to="/contact" class="nav-link fs-16 fw-600 text-uppercase">Contact</router-link>
             </li>
           </ul>
-          <button class="btn fs-16 fw-600 text-uppercase bg-dark text-white py-2 px-3 w-100-mx-991"> Get Started </button>
+          <button class="btn fs-16 fw-600 text-uppercase bg-dark text-white py-2 px-3 w-100-mx-991" data-bs-toggle="modal" data-bs-target="#getStarted"> Get Started </button>
         </div>
       </div>
     </nav>
