@@ -50,5 +50,15 @@ export default {
 </script>
 
 <style scoped>
+@media only screen and (min-width: 992px) {
+  .navbar .container {
+    position: relative;
+  }
 
+  .navbar .container button.btn {
+    right: 0;
+    z-index: 3;
+    position: absolute;
+  }
+}
 </style>

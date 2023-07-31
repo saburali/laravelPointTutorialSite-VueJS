@@ -39,7 +39,7 @@ export default {
   right: 0;
   width: 650px;
   height: 30vh;
-  z-index: 99999;
+  z-index: 2;
   display: block;
   position: absolute;
   background-size: contain;

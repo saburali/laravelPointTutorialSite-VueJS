@@ -22,7 +22,7 @@
               <a href="#" target="_blank" class="fs-16 text-decoration-none d-block mb-3 footer-link"> Customer Support </a>
               <a href="#" target="_blank" class="fs-16 text-decoration-none d-block mb-3 footer-link"> Purchase Details </a>
               <a href="#" target="_blank" class="fs-16 text-decoration-none d-block mb-3 footer-link"> Terms & Conditions </a>
-              <a href="#" target="_blank" class="fs-16 text-decoration-none d-block mb-3 footer-link"> Privacy Policy </a>
+              <router-link to="/PrivacyPolicy" class="fs-16 text-decoration-none d-block mb-3 footer-link"> Privacy Policy </router-link>
             </div>
             <div class="col-md-4">
               <h4 class="fs-16 fw-bold mb-4"> Resources </h4>
