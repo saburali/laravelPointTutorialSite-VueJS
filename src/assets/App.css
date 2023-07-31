@@ -95,9 +95,25 @@ body {
     transform: scale(1.1);
 }
 
+.themeBtn {
+    color: white;
+    transition: all 0.4s ease-in-out;
+    border: 2px solid var(--themeColor);
+    background-color: var(--themeColor);
+}
+
+.themeBtn:hover {
+    color: var(--themeColor);
+    background-color: transparent;
+}
+
 /* Border */
 .b-gray-5px {
     border: 5px solid #a2a3a6
+}
+
+.theme-border {
+    border: 1px solid var(--themeColor);
 }
 
 /* Color */
@@ -637,5 +653,27 @@ body {
 @media only screen and (max-width: 767px) {
     .hero-section {
         padding-top: 90px;
+    }
+
+    .b-0-mx-767 {
+        border: 0 !important;
+    }
+
+    .pe-0-mx-767 {
+        padding-left: 0 !important;
+    }
+
+    .me-0-mx-767 {
+        margin-left: 0 !important;
+    }
+
+    .fs-38-mx-767 {
+        font-size: 38px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .fs-32-mx-767 {
+        font-size: 32px;
     }
 }

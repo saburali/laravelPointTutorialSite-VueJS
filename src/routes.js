@@ -10,6 +10,7 @@ import FreeTutorials from "@/pages/FreeTutorials";
 import CoursePage from "@/pages/Course";
 import ChallengeSingleInstructions from "@/pages/ChallengeSingleInstructions";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import CourseSingle from "@/pages/CourseSingle";
 
 const routes = [
     {
@@ -61,6 +62,11 @@ const routes = [
         name: 'PrivacyPolicy',
         path: '/PrivacyPolicy',
         component: PrivacyPolicy
+    },
+    {
+        name: 'CourseSingle',
+        path: '/CourseSingle',
+        component: CourseSingle
     },
     {
         name: 'NotFound',

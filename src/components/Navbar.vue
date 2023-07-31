@@ -21,7 +21,7 @@
               <ul class="dropdown-menu">
                 <li><router-link to="/free-tutorials" class="dropdown-item fs-16 fw-600 text-uppercase">Free Tutorials</router-link></li>
                 <li><router-link to="/ChallengeSingleInstructions" class="dropdown-item fs-16 fw-600 text-uppercase">Challenge Single Instructions</router-link></li>
-                <li><router-link to="/" class="dropdown-item fs-16 fw-600 text-uppercase">Laravel</router-link></li>
+                <li><router-link to="/CourseSingle" class="dropdown-item fs-16 fw-600 text-uppercase">Course Single</router-link></li>
               </ul>
             </li>
             <li class="nav-item">
