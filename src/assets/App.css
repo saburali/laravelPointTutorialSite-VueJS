@@ -317,6 +317,10 @@ body {
     height: 60px;
 }
 
+.h-100p {
+    height: 100px;
+}
+
 /* Width */
 .w-18 {
     width: 18px;
@@ -326,12 +330,20 @@ body {
     width: 60px;
 }
 
+.w-100p {
+    width: 100px;
+}
+
 .w-150 {
     width: 150px;
 }
 
 .w-160 {
     width: 160px;
+}
+
+.w-200 {
+    width: 200px;
 }
 
 /* Word Break */
@@ -497,6 +509,10 @@ body {
 
     .fs-12-mx-991 {
         font-size: 12px;
+    }
+
+    .fs-14-mx-991 {
+        font-size: 14px;
     }
 
     .lh-12-mx-991 {
